@@ -82,16 +82,17 @@ export const Table = (props: TableProps) => {
                         )
                     })}
                 </tbody>
-            </table>
-            <div className="bottom-table">
-                <div className="wrapper-btn-pagination">
-                    {viewPagination.indexView.map((item, index) => {
-                        return (
-                            <div className={"btn-pagination " + (tablePagination.currentPage == item ? 'active' : '')} onClick={() => { onClickPage(item) }} key={index}>{item}</div>
-                        )
-                    })}
-                </div>
+                    <div className="bottom-table">
+                    <div className="wrapper-btn-pagination">
+                        {viewPagination.indexView.map((item, index) => {
+                            return (
+                                <div className={"btn-pagination " + (tablePagination.currentPage == item ? 'active' : '')} onClick={() => { onClickPage(item) }} key={index}>{item}</div>
+                            )
+                        })}
+                    </div>
             </div>
+            </table>
+            
         </>
     )
 }
